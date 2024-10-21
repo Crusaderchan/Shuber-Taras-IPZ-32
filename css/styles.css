@@ -9,6 +9,13 @@
     
 
 }
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
 
 body {
     height: 100%;
@@ -31,16 +38,13 @@ body {
 }
 
 .header a {
+    
 	font-weight: 500;
 	color: var(--dark-color);
 	font-size: 14px;
 	line-height: 1.17;
 	letter-spacing: 2%;
-    text-decoration: none;
-}
-
-.header li {
-    list-style: none;
+    
 }
 
 .header-left, .header-nav {
@@ -75,7 +79,6 @@ body {
     margin-left: auto; 
     
 }
-
 .hero {
     background-color: var(--dark-crey-color);
     display: flex;   
@@ -102,6 +105,41 @@ body {
 .hero_link {
     display: block;          /* Задає блочний елемент */
     margin-top: 10px;      /* Відступ між заголовком і посиланням */
-    text-decoration: none;   /* Забрати підкреслення */
     color: var(--white-color); /* Задати колір тексту посилання */
+}
+
+.ourpreference ul {
+   display: flex;
+   gap: 20px;
+}
+.ourbusiness h2 {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.ourbusiness ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.ourbusiness img {
+    width: 370px;
+    height: 294px;
+    top: 1058px;
+    left: 215px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+.ourteam img {
+    width: 270px;
+    height: 260px;
+    top: 1632px;
+    left: 215px;
+    gap: 0px;
+    opacity: 0px;
+
 }
