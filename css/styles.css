@@ -57,6 +57,7 @@
   }
   
   .header_logo {
+    display: flex;
     font-family: var(--logo-font);
     color: var(--dark-color);
     font-weight: bold;
@@ -68,7 +69,11 @@
   .logo-blue {
     color: var(--blue-color);
   }
-  
+  .header-left .header_logo {
+    position: absolute;
+    top: 24px;
+    left: 0;
+  }
   .header-nav ul {
     display: flex;
     gap: 30px;
@@ -101,6 +106,7 @@
     align-items: center;
     height: 100vh;
     max-height: 600px;
+    min-height: 300px;
     text-align: center;
   }
   
