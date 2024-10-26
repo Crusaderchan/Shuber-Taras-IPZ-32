@@ -10,6 +10,8 @@
   --white-border-color: #ececec;
   --border-grey-color: #afb1b8;
   --border-white-color: #eeeeee;
+  --grey-back-color: #F5F4FA;
+
 }
 
 ul {
@@ -81,6 +83,7 @@ section {
   }
 
   .header-nav {
+    margin-left: 93px;
     display: flex;
   }
 
@@ -100,7 +103,7 @@ section {
     display: flex;
     padding-left: 0px;
     gap: 50px;
-    margin-left: 93px;
+    
     align-items: center;
   }
 
@@ -108,7 +111,6 @@ section {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-left: 15px;
   }
 
   .header_contacts a {
@@ -172,6 +174,9 @@ section {
     display: flex;
     gap: 30px;
   }
+  li {
+    max-width: 270px;
+  }
   h3 {
     font-size: 14px;
     font-weight: 700;
@@ -211,7 +216,7 @@ section {
 }
 
 .ourteam {
-  background-color: var(--white-grey-color);
+  background-color: var(--grey-back-color);
   h2 {
     text-align: center;
     font-size: 36px;
@@ -220,7 +225,7 @@ section {
     letter-spacing: 0.03em;
     margin-bottom: 50px;
   }
-  h4 {
+  h3 {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.17;
@@ -234,8 +239,12 @@ section {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-align: center;
-    margin: 10px 0 30px 0;
+    margin-top: 10px;
   }
+  .ourteam-list li div {
+    padding: 30px;
+    
+  } 
   ul {
     display: flex;
     gap: 30px;
@@ -254,7 +263,7 @@ section {
 
 .footer {
   background-color: var(--dark-crey-color);
-  padding: 60px;
+  padding: 60px 0;
   .header_logo {
     font-family: var(--logo-font);
     color: var(--white-color);
