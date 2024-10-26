@@ -59,6 +59,8 @@ section {
   padding: 24px 0;
   border: 10px;
   border-color: var(--blue-color);
+  border-bottom: 1px solid;
+  border-color: var(--white-border-color);
 
   .header-nav li a {
     font-weight: 500;
