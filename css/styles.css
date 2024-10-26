@@ -314,7 +314,7 @@
     li {
       margin-top: 12px;
     }
-    .footer-list a {
+   a {
       color: var(--white-grey-color);
       
     }
