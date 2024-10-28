@@ -34,6 +34,11 @@ p {
 img {
   display: block;
 }
+svg{
+
+  margin: 0;
+  
+}
 button {
   padding: 0;
   margin: 0;
@@ -63,6 +68,14 @@ section {
   border-color: var(--blue-color);
   border-bottom: 1px solid;
   border-color: var(--white-border-color);
+  a {
+   color: var(--grey-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    
+  }
 
   .header-nav li a {
     font-weight: 500;
@@ -111,16 +124,20 @@ section {
     display: flex;
     align-items: center;
     gap: 40px;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    a {
+      margin-left: auto;
+      
+    }
+
   }
 
-  .header_contacts a {
-    margin-left: auto;
-    color: var(--grey-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-  }
+ 
 }
 
 .hero {
@@ -173,6 +190,15 @@ section {
   ul {
     display: flex;
     gap: 30px;
+    div {
+      text-align: center;
+      padding: 25px 100px;
+      margin-bottom: 30px;
+      background-color: var(--grey-back-color) ;
+      border-radius: 4px 0px 0px 0px;
+      
+
+    }
   }
   li {
     max-width: 270px;
@@ -231,26 +257,32 @@ section {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-align: center;
+    
   }
 
-  .ourteam-list li { p {
+  .ourteam-list li { 
+    p {
     color: var(--grey-color);
     font-size: 16px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 16px
   }
 }
   .ourteam-list li div {
     padding: 30px;
+    ul {
+      gap: 10px;
+    }
     
   } 
   ul {
     display: flex;
     gap: 30px;
-    flex-wrap: wrap;
-    li {
+    
+    .ourteam-item {
       background-color: var(--white-color);
       border-radius: 5px;
       box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -262,6 +294,36 @@ section {
   }
 }
 
+.ourclients {
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+  }
+  ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    ;
+    div {
+      
+      border: 1px solid var(--border-grey-color);
+      border-radius: 5px;
+      padding: 16px 32px;
+      text-align: center;;
+
+      svg {
+        color: var(--grey-color);
+      }
+  
+      
+    }
+
+  }
+}
 .footer {
   background-color: var(--dark-crey-color);
   padding: 60px 0;
@@ -344,6 +406,7 @@ section {
           line-height: 36px;
           letter-spacing: 0.06em;
           text-align: left;
+          
         }
         p {
           font-size: 16px;
