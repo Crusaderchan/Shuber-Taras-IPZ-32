@@ -233,7 +233,7 @@ section {
     text-align: center;
   }
 
-  .ourteam-list li p {
+  .ourteam-list li { p {
     color: var(--grey-color);
     font-size: 16px;
     line-height: 1.17;
@@ -241,6 +241,7 @@ section {
     text-align: center;
     margin-top: 10px;
   }
+}
   .ourteam-list li div {
     padding: 30px;
     
@@ -280,7 +281,7 @@ section {
   a:hover {
     color: var(--blue-color);
   }
-  p {
+  address {
     color: var(--white-color);
   }
   li {
