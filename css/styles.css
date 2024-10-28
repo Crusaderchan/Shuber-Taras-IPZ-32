@@ -285,6 +285,7 @@ section {
     color: var(--white-color);
   }
   li {
+    font-size: 14px;
     margin-top: 12px;
   }
   a {
