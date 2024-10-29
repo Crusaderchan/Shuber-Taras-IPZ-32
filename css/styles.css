@@ -11,6 +11,8 @@
   --border-grey-color: #afb1b8;
   --border-white-color: #eeeeee;
   --grey-back-color: #F5F4FA;
+  --footer-media-links-color: #FFFFFF1A;
+
 
 }
 
@@ -28,6 +30,7 @@ a,
 h2,
 h3,
 h4,
+h5,
 p {
   margin: 0;
 }
@@ -91,8 +94,17 @@ section {
   div {
     display: flex;
   }
-  ul a:hover {
-    color: var(--blue-color);
+  svg {
+    color: var(--grey-color);
+  }
+  li:hover {
+    a{
+      color: var(--blue-color);
+      
+    }
+    svg {
+      color: var(--blue-color);
+    }
   }
 
   .header-nav {
@@ -151,6 +163,16 @@ section {
   min-height: 300px;
   text-align: center;
   padding: 200px 0;
+  
+  background: linear-gradient(
+    rgba(47, 48, 58, 0.4), 
+    rgba(47, 48, 58, 0.7)
+  ),
+  url(../images/hero-backgroun-img.jpg);
+  background-size: cover;
+  background-size: 1600px;
+  background-position: center;
+	background-repeat: no-repeat;
 
   h1 {
     font-weight: 900;
@@ -259,6 +281,9 @@ section {
     text-align: center;
     
   }
+  svg {
+    color: var(--grey-color);
+  }
 
   .ourteam-list li { 
     p {
@@ -273,14 +298,13 @@ section {
 }
   .ourteam-list li div {
     padding: 30px;
-    ul {
-      gap: 10px;
-    }
+    
     
   } 
   ul {
     display: flex;
     gap: 30px;
+    justify-content: center;
     
     .ourteam-item {
       background-color: var(--white-color);
@@ -288,10 +312,12 @@ section {
       box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
     }
   }
+  
   img {
     width: 270px;
     height: 260px;
   }
+  
 }
 
 .ourclients {
@@ -308,12 +334,20 @@ section {
     gap: 30px;
     justify-content: center;
     ;
-    div {
+    li:hover {
+      border-color: var(--blue-color);
+    }
+    li {
       
       border: 1px solid var(--border-grey-color);
       border-radius: 5px;
       padding: 16px 32px;
       text-align: center;;
+      svg:hover {
+        color: var(--blue-color);
+        
+      }
+      
 
       svg {
         color: var(--grey-color);
@@ -325,15 +359,10 @@ section {
   }
 }
 .footer {
+  
   background-color: var(--dark-crey-color);
   padding: 60px 0;
-  .header_logo {
-    font-family: var(--logo-font);
-    color: var(--white-color);
-    font-weight: bold;
-    font-size: 26px;
-    letter-spacing: 0.03em;
-  }
+  
   ul {
     margin-top: 28px;
   }
@@ -353,6 +382,50 @@ section {
   a {
     color: var(--white-grey-color);
   }
+  h5 {
+    
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.41px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: var(--white-color);
+    text-transform: uppercase;
+
+  }
+  .container {
+		display: flex;
+		align-items: baseline;
+		gap: 94px; 
+    .header_logo {
+      font-family: var(--logo-font);
+      color: var(--white-color);
+      font-weight: bold;
+      font-size: 26px;
+      letter-spacing: 0.03em;
+    }
+    .footer-media  {
+      display: flex;
+      gap: 10px;  
+      a {
+        display: flex;
+        width: 44px;
+				height: 44px;
+				border-radius: 90%;
+        background-color: var(--footer-media-links-color);
+        justify-content: center;
+        align-items: center;
+      } 
+      a:hover {
+        background-color: var(--blue-color);
+      }
+      svg {
+        color: var(--white-color);
+      }
+    }
+  
+  }
+  
 }
 
 /* portfolio styles */
@@ -380,9 +453,14 @@ section {
       border: #ffffff99;
       padding: 6px 22px;
     }
-    button:hover {
+    button:focus, button:hover {
       color: var(--white-color);
       background-color: var(--blue-color);
+      box-shadow: 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.12),  
+        0px 1px 2px 0px rgba(0, 0, 0, 0.08),  
+        0px 3px 1px 0px rgba(0, 0, 0, 0.10);  
+
     }
   }
 
@@ -391,6 +469,18 @@ section {
     flex-wrap: wrap;
     gap: 30px;
     align-items: center;
+    justify-content: center;
+    li:focus, li:hover {
+      
+      
+      box-shadow: 
+        1px 4px 6px 0px rgba(0, 0, 0, 0.16),  
+        0px 4px 4px 0px rgba(0, 0, 0, 0.06),  
+        0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+      
+      
+
+    }
 
     li {
       width: calc(33.333% - 20px);
