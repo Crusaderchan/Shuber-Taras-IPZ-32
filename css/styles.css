@@ -41,6 +41,7 @@ svg {
 button {
   padding: 0;
   margin: 0;
+  cursor: pointer;
 }
 
 body {
@@ -74,6 +75,38 @@ section {
     line-height: 1.17;
     letter-spacing: 0.02em;
   }
+  .header-nav-link {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 0px; 
+    transition: color 0.3s ease;
+  }
+  
+ 
+  .header-nav-link::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 4px;
+    background-color: #2196f3;
+    position: absolute;
+    bottom: -31px; 
+    border-radius: 2px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  
+  
+  .header-nav-link.active {
+    .header-nav-link::after {
+      width: 100%;
+    }
+    a {
+      color: var(--blue-color);
+      
+    }
+  }
 
   .header-nav li a {
     font-weight: 500;
@@ -95,9 +128,13 @@ section {
   li:hover {
     a {
       color: var(--blue-color);
+      transition: transform 250ms 
+      cubic-bezier(0.4, 0, 0.2, 1);
     }
     svg {
       color: var(--blue-color);
+      transition: transform 250ms 
+      cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 
@@ -190,6 +227,8 @@ section {
   button:hover {
     background-color: var(--white-color);
     color: var(--blue-color);
+    transition: transform 250ms 
+    cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -246,6 +285,30 @@ section {
     width: 370px;
     height: 294px;
   }
+  .ourbusiness-list li {
+    position: relative;
+    div {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(47, 48, 58, 0.8);;
+      p {
+        padding: 27px;
+        color: var(--white-color);
+        text-transform: uppercase;
+        font-family: Roboto;
+        font-size: 14px;  
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        text-align: center;
+
+      }
+  
+
+  }
+  
+  }
 }
 
 .ourteam {
@@ -285,16 +348,30 @@ section {
   }
   ul {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     justify-content: center;
+    align-items: center;
 
     .ourteam-item {
       background-color: var(--white-color);
       border-radius: 5px;
       box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+      a {
+        display: flex;
+        padding: 11px;
+        border-radius: 50%;
+      }
+      a:hover {
+        background-color: #2196f3;
+        transition: transform 250ms 
+        cubic-bezier(0.4, 0, 0.2, 1);
+        svg {
+          color: var(--white-color);
+        }
+      }
     }
   }
-
+  
   img {
     width: 270px;
     height: 260px;
@@ -316,6 +393,8 @@ section {
     justify-content: center;
     li:hover {
       border-color: var(--blue-color);
+      transition: transform 250ms 
+      cubic-bezier(0.4, 0, 0.2, 1);
     }
     li {
       border: 1px solid var(--border-grey-color);
@@ -324,6 +403,8 @@ section {
       text-align: center;
       svg:hover {
         color: var(--blue-color);
+        transition: transform 250ms 
+        cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       svg {
@@ -344,6 +425,8 @@ section {
   }
   a:hover {
     color: var(--blue-color);
+    transition: transform 250ms 
+    cubic-bezier(0.4, 0, 0.2, 1);
   }
   address {
     color: var(--white-color);
@@ -388,7 +471,10 @@ section {
         align-items: center;
       }
       a:hover {
+        
         background-color: var(--blue-color);
+        transition: transform 250ms 
+        cubic-bezier(0.4, 0, 0.2, 1);
       }
       svg {
         color: var(--white-color);
@@ -396,6 +482,49 @@ section {
     }
   }
 }
+
+.is-hidden {
+  
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  
+}
+.backdrop {
+  position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal-window {
+    width: 528px;
+    height: 581px;
+    max-height: 99vh;
+    border-radius: 4px;
+    background-color: var(--white-color);
+    text-align: end;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: opacity 250s cubic-bezier(0.4, 0, 0.2, 1);
+    .modal-window-close-button {
+      justify-content: end;
+      border: 0;
+      background-color: var(--white-color);
+      margin-top: 8px;
+      margin-right: 8px;
+      cursor: pointer;
+      transition: opacity 250s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+  }
+}
+
 
 /* portfolio styles */
 .content {
@@ -425,11 +554,14 @@ section {
     button:focus,
     button:hover {
       color: var(--white-color);
+      transition: transform 250ms 
+      cubic-bezier(0.4, 0, 0.2, 1);
       background-color: var(--blue-color);
       box-shadow:
         0px 2px 2px 0px rgba(0, 0, 0, 0.12),
         0px 1px 2px 0px rgba(0, 0, 0, 0.08),
         0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+        
     }
   }
 
@@ -439,8 +571,42 @@ section {
     gap: 30px;
     align-items: center;
     justify-content: center;
+
+    .main-content-content-overlay-container:hover {
+      .main-content-content-description{
+        transform: translateY(0%)
+      }
+    }
+
+    .main-content-content-overlay-container {
+      
+      position: relative;
+      overflow: hidden;
+      .main-content-content-description {
+        height: 100%;
+        position: absolute;
+        background-color: rgba(33, 150, 243, 0.9);
+        transform: translateY(100%);
+        transition: transform 250ms 
+        cubic-bezier(0.4, 0, 0.2, 1);
+        
+        p{
+          padding: 63px 24px;
+          color: var(--white-color);
+          font-family: Roboto;
+          font-size: 18px;
+          line-height: 28px;
+          letter-spacing: 0.03em;
+          text-align: left;
+          
+
+        }
+      }
+    } 
     li:focus,
     li:hover {
+      transition: transform 250ms 
+        cubic-bezier(0.4, 0, 0.2, 1);
       box-shadow:
         1px 4px 6px 0px rgba(0, 0, 0, 0.16),
         0px 4px 4px 0px rgba(0, 0, 0, 0.06),
@@ -449,13 +615,15 @@ section {
 
     li {
       width: calc(33.333% - 20px);
+      
 
-      div {
+
+      .main-content-content-item {
         padding: 20px 24px;
         border: 1px solid;
         border-top: 0;
         border-color: var(--border-white-color);
-
+        
         h4 {
           font-size: 18px;
           line-height: 36px;

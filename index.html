@@ -22,11 +22,14 @@
           >
           <nav class="header-nav">
             <ul>
-              <li><a href="./index.html">Студія</a></li>
-              <li><a href="./portfolio.html">Портфоліо</a></li>
-              <li><a href="#!">Контакти</a></li>
+              <li class="header-nav-link active" nav-link><a class="header-nav-link" href="./index.html"    nav-link>Студія</a></li>
+              <li class="header-nav-link" nav-link><a href="./portfolio.html">Портфоліо</a></li>
+              <li class="header-nav-link" nav-link><a href="#!">Контакти</a></li>
             </ul>
           </nav>
+          <ul class="nav-hover">
+
+          </ul>
         </div>
 
         <ul class="header_contacts">
@@ -52,7 +55,7 @@
         <div class="container">
           <div class="hero-columm">
             <h1 class="hero_tittle">Ефективні рішення для вашого бізнесу</h1>
-            <button href="#" class="hero_link">Замовити послугу</button>
+            <button type="button" class="hero_link" data-modal-open>Замовити послугу</button>
           </div>
         </div>
       </section>
@@ -123,6 +126,9 @@
                   width="370"
                   height="294"
                 />
+                <div>
+                  <p>Десктопні додатки</p>
+                </div>
               </li>
               <li>
                 <img
@@ -131,6 +137,9 @@
                   width="370"
                   height="294"
                 />
+                <div>
+                  <p>Мобільні додатки</p>
+                </div>
               </li>
               <li>
                 <img
@@ -139,6 +148,9 @@
                   width="370"
                   height="294"
                 />
+                <div>
+                  <p>Дизайнерські рішення</p>
+                </div>
               </li>
             </ul>
           </div>
@@ -423,6 +435,22 @@
 
         </div>
       </section>
-    
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-window">
+        
+          <button class="modal-window-close-button" type="button" data-modal-close>
+            <svg width="30" height="30">
+              <use href="images/icons/icons.svg#close"></use></svg></a>
+        </li>
+            
+          </button>
+        
+      </div>
+
+    </div>
+    <script src="./js/modal.js"></script>
+    <script src ="./js/nav-list-blue-line.js"></script>
+
   </body>
 </html>
